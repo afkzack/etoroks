@@ -1,0 +1,172 @@
+{% extends 'sunbit/base.html' %}
+
+
+
+{% block content %}
+
+
+
+
+  
+    <!-- Carousel -->
+    <div id="demo" class="carousel slide" data-bs-ride="carousel">
+
+        <!-- Indicators/dots -->
+        <div class="carousel-indicators">
+          <button type="button" data-bs-target="#demo" data-bs-slide-to="0" class="active"></button>
+          <button type="button" data-bs-target="#demo" data-bs-slide-to="1"></button>
+          <button type="button" data-bs-target="#demo" data-bs-slide-to="2"></button>
+        </div>
+        
+        <!-- The slideshow/carousel -->
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img src="https://www.ironfx.com/wp-content/uploads/2022/10/forex-trade-ideas-825x344-1.jpg" alt="Los Angeles" class="d-block" style="width:100%">
+          </div>
+          <div class="carousel-item">
+            <img src="https://www.ironfx.com/wp-content/uploads/2022/10/forex-trade-ideas-825x344-1.jpg" alt="Chicago" class="d-block" style="width:100%">
+          </div>
+          <div class="carousel-item">
+            <img src="https://www.ironfx.com/wp-content/uploads/2022/10/forex-trade-ideas-825x344-1.jpg" alt="New York" class="d-block" style="width:100%">
+          </div>
+        </div>
+        
+        <!-- Left and right controls/icons -->
+        <button class="carousel-control-prev" type="button" data-bs-target="#demo" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon"></span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#demo" data-bs-slide="next">
+          <span class="carousel-control-next-icon"></span>
+        </button>
+      </div>
+      
+      
+      
+      
+      <div class="container-fluid mt-1">
+        <div class="row">
+            <div class="col p-1">
+      
+      
+      
+      
+      <!-- TradingView Widget BEGIN -->
+      <div class="tradingview-widget-container">
+        <div class="tradingview-widget-container__widget"></div>
+        <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-ticker-tape.js" async>
+        {
+        "symbols": [
+          {
+            "proName": "FOREXCOM:SPXUSD",
+            "title": "S&P 500"
+          },
+          {
+            "proName": "FOREXCOM:NSXUSD",
+            "title": "US 100"
+          },
+          {
+            "proName": "FX_IDC:EURUSD",
+            "title": "EUR to USD"
+          },
+          {
+            "proName": "BITSTAMP:BTCUSD",
+            "title": "Bitcoin"
+          },
+          {
+            "proName": "BITSTAMP:ETHUSD",
+            "title": "Ethereum"
+          },
+          {
+            "description": "Gold",
+            "proName": "OANDA:XAUUSD"
+          }
+        ],
+        "showSymbolLogo": true,
+        "colorTheme": "dark",
+        "isTransparent": false,
+        "displayMode": "adaptive",
+        "locale": "en"
+      }
+        </script>
+      </div>
+      <!-- TradingView Widget END -->
+      
+      
+            </div>
+        </div>
+        <div class="row">
+            <div class="col p-2">
+              <a href="#" class="text-decoration-none text-white">
+                <div class="container border border-black rounded-3 bg-warning text-black p-3 shadow">
+                  <i class="material-icons p-2">contact_support</i>
+                  <span class="mt-6">Contact Us</span>
+                </div>
+              </a>
+            </div>
+            <div class="col p-2">
+              <a href="#" class="text-decoration-none text-white">
+              <div class="container border border-black rounded-3 bg-warning text-black p-3 shadow">
+                <i class="material-icons p-2">translate</i>
+                <span class="mt-6">Language</span>
+              </div>
+              </a>
+            </div>
+        </div>
+        
+        <div class="row">
+          <div class="col p-2">
+            <a href="#" class="text-decoration-none text-white">
+                <div class="container border border-black rounded-3 bg-info text-black p-3 text-center">
+                  <i class="material-icons p-2">payments</i>
+                  <h5>Quick Transaction</h5>
+                </div>
+            </a>
+          </div>
+        </div>
+      
+        <div class="row">
+          <div class="col p-1">
+            <a href="#" class="text-decoration-none text-white">
+              <div class="container border border-black rounded-3 bg-warning text-black p-3 shadow">
+                <i class="material-icons p-1">candlestick_chart</i>
+                <span class="mt-6">Future Trading</span>
+              </div>
+            </a>
+          </div>
+          <div class="col p-1">
+            <a href="#" class="text-decoration-none text-white">
+            <div class="container border border-black rounded-3 bg-warning text-black p-3 shadow">
+              <i class="material-icons p-1">helps</i>
+              <span class="mt-6">Help Center</span>
+            </div>
+            </a>
+          </div>
+        </div>
+      
+      
+      </div>
+      
+      
+      
+      <!-- TradingView Widget BEGIN -->
+      <div class="tradingview-widget-container">
+        <div class="tradingview-widget-container__widget"></div>
+        <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-timeline.js" async>
+        {
+        "feedMode": "market",
+        "market": "crypto",
+        "colorTheme": "dark",
+        "isTransparent": false,
+        "displayMode": "regular",
+        "width": "100%",
+        "height": "500",
+        "locale": "en"
+      }
+        </script>
+      </div>
+      <!-- TradingView Widget END -->
+
+
+
+
+{% endblock %}

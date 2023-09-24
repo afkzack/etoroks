@@ -1,0 +1,33 @@
+{% extends 'sunbit/base.html' %}
+
+
+
+{% block content %}
+
+
+
+<div class="container bg-light mt-2 mb-2 p-2 justify-content-center h-100">
+    <div class="text-center">
+        <img src="{{user.profile.photo.url}}" alt="Logo" style="width:80px;height:80px;" class="rounded-circle">
+    </div>
+    <br>
+
+    {% if user.is_authenticated %}
+    <ul class="list-group">
+        <li class="list-group-item"><span>Username - </span>{{ user.username }}</li>
+        <li class="list-group-item"><span>Email - </span>{{ user.email }}</li>
+        <li class="list-group-item"><span>Full Name - </span>{{ user.first_name }} {{ user.last_name }}</li>
+        <a href="{% url 'logout' %}" style="text-decoration:none;"><li class="list-group-item text-bg-danger">Logout</li></a>
+      </ul>
+    {% else %}
+    <ul>
+    <a href="{% url 'login' %}" style="text-decoration:none;"><li class="list-group-item">Vestibulum at eros</li></a><a href="{% url 'login' %}">login</a>
+    </ul>
+    {% endif %}
+
+
+
+</div>
+
+
+{% endblock %}

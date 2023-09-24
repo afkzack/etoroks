@@ -1,0 +1,114 @@
+{% extends "sunbit/base.html" %}
+
+{% block content %}
+
+<!-- TradingView Widget BEGIN -->
+<div class="tradingview-widget-container">
+    <div class="tradingview-widget-container__widget"></div>
+    <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-single-quote.js" async>
+    {
+    "symbol": "BINANCE:BTCUSDT",
+    "width": "100%",
+    "colorTheme": "dark",
+    "isTransparent": false,
+    "locale": "en"
+  }
+    </script>
+  </div>
+  <!-- TradingView Widget END -->
+   
+   
+   
+   
+   
+   
+   <!-- TradingView Widget BEGIN -->
+  <div class="tradingview-widget-container">
+    <div class="tradingview-widget-container__widget"></div>
+    <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-technical-analysis.js" async>
+    {
+    "interval": "1m",
+    "width": "100%",
+    "isTransparent": false,
+    "height": "380",
+    "symbol": "BINANCE:BTCUSDT",
+    "showIntervalTabs": true,
+    "locale": "en",
+    "colorTheme": "dark"
+  }
+    </script>
+  </div>
+  <!-- TradingView Widget END -->
+   
+   
+   
+   
+   
+                      
+              
+                  <!-- TradingView Widget BEGIN -->
+     <div class="tradingview-widget-container">
+      <div class="tradingview-widget-container__widget">        
+      </div>
+      <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-symbol-overview.js" async>
+      {
+      "symbols": [
+        [
+          "BINANCE:BTCUSDT|1M"
+        ],
+        [
+          "OKX:ETHUSDT|1M"
+        ],
+        [
+          "OANDA:XAUUSD|1M"
+        ]
+      ],
+      "chartOnly": false,
+      "width": 390,
+      "height": 400,
+      "locale": "en",
+      "colorTheme": "dark",
+      "autosize": true,
+      "showVolume": false,
+      "showMA": false,
+      "hideDateRanges": false,
+      "hideMarketStatus": false,
+      "hideSymbolLogo": false,
+      "scalePosition": "right",
+      "scaleMode": "Normal",
+      "fontFamily": "-apple-system, BlinkMacSystemFont, Trebuchet MS, Roboto, Ubuntu, sans-serif",
+      "fontSize": "10",
+      "noTimeScale": false,
+      "valuesTracking": "1",
+      "changeMode": "price-and-percent",
+      "chartType": "area",
+      "maLineColor": "#2962FF",
+      "maLineWidth": 1,
+      "maLength": 9,
+      "lineWidth": 2,
+      "lineType": 0,
+      "dateRanges": [
+        "1d|1",
+        "1m|30",
+        "3m|60",
+        "12m|1D",
+        "60m|1W",
+        "all|1M"
+      ]
+    }
+      </script>
+     </div>
+    <!-- TradingView Widget END -->
+    
+        <div class="container-fluid mt-3 mb-3">
+          <div class="row" style="height: 50px;">
+              <div class="col p-2">
+                  <button type="button" class="btn btn-success" style="width:100%;height:100%;">Buy</button>
+              </div>
+              <div class="col p-2">
+                  <button type="button" class="btn btn-danger" style="width:100%;height:100%;">Sell</button>
+              </div>
+          </div>
+        </div>
+
+{% endblock %}

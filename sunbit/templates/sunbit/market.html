@@ -1,0 +1,98 @@
+{% extends 'sunbit/base.html' %}
+
+
+
+{% block content %}
+
+
+
+ 
+ 
+ <!-- TradingView Widget BEGIN -->
+    <div class="tradingview-widget-container">
+        <div class="tradingview-widget-container__widget"></div>
+        <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-market-overview.js" async>
+        {
+        "colorTheme": "dark",
+        "dateRange": "12M",
+        "showChart": false,
+        "locale": "en",
+        "width": "100%",
+        "height": "700",
+        "largeChartUrl": "",
+        "isTransparent": false,
+        "showSymbolLogo": true,
+        "showFloatingTooltip": false,
+        "tabs": [
+          {
+            "title": "USDT",
+            "symbols": [
+              {
+                "s": "BINANCE:BTCUSDT",
+                "d": "BTC to USDT"
+              },
+              {
+                "s": "OKX:ETHUSDT",
+                "d": "ETH to USDT"
+              },
+              {
+                "s": "BINANCE:DOTUSDT",
+                "d": "DOT to USDT"
+              },
+              {
+                "s": "KUCOIN:SHIBUSDT",
+                "d": "SHIB to USDT"
+              },
+              {
+                "s": "BINANCE:ADAUSDT",
+                "d": "ADA to USDT"
+              },
+              {
+                "s": "BINANCE:DOGEUSDT",
+                "d": "DOGE to USDT"
+              },
+              {
+                "s": "OKX:CROUSDT",
+                "d": "CRO to USDT"
+              },
+              {
+                "s": "BINANCE:FILUSDT",
+                "d": "FIL to USDT"
+              }
+            ]
+          },
+          {
+            "title": "Forex",
+            "symbols": [
+              {
+                "s": "FX:EURUSD"
+              },
+              {
+                "s": "FX:GBPUSD"
+              },
+              {
+                "s": "FX:USDJPY"
+              },
+              {
+                "s": "FX:GBPJPY"
+              },
+              {
+                "s": "FX:USDCAD"
+              },
+              {
+                "s": "OANDA:AUDUSD"
+              },
+              {
+                "s": "FX:EURAUD"
+              }
+            ],
+            "originalTitle": "Forex"
+          }
+        ]
+      }
+        </script>
+      </div>
+      <!-- TradingView Widget END -->
+      
+      
+{% endblock %}

@@ -1,0 +1,152 @@
+/* Created by superUser */
+
+
+        /* ================IMPORING GOOGLE FONTS ====== */
+        
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500;600&display=swap');
+        /*============= CSS VARIABLES======== */
+        /* COLORS */
+        
+         :root {
+            --firstColor: hsl(79, 100%, 49%);
+            --whiteColor: #fff;
+            --blackColor: #000;
+            /* FONTS */
+            --bodyFonts: 'Poppins', sans-serif;
+            --normalFontSize: .938rem;
+            --tinyFontSize: .563rem;
+        }
+        /* ======RESPONSSIVE TYPOGRAPHY======= */
+        
+@media screen and (min-width:968px) {
+      :root {
+                --normalFontSize: 1rem;
+            }
+                                    }
+        /*========= BASE =====*/
+        
+ * {
+            box-sizing: border-box;
+            padding: 0;
+            margin: 0;
+   }
+   
+        
+ body {
+            font-family: var(--bodyFonts);
+            font-size: var(--normalFontSize);
+            background-color: var(--whiteColor);
+        }
+        
+        /* INPUT FIELD */
+        
+.form {
+            height: 100vh;
+            display: grid;
+            place-items: center;
+            margin: 0 1.5rem;
+     
+        }
+.formContent{
+            display: grid;
+            row-gap: 1.5rem;
+            
+        }
+        
+.formInput,
+   .formLabel,
+      .formSubmit {
+            border: 0;
+            outline: none;
+            font-size: var(--normalFontSize);
+            font-family: var(--bodyFont);
+        }
+.formBox{
+            width: 312px;
+            height: 59px;
+            position: relative;
+        }
+.formShadow{
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background-color: var(--blackColor);
+
+           }
+.formInput{
+            position: absolute;
+            border: 2.5px solid var(--blackColor);
+            background-color: var(--whiteColor);
+            width: 100%;
+            height: 100%;
+            z-index: 10;
+            padding: 18px;
+            transition: transform .3s;
+
+        }
+.formInput::placeholder{
+            transition: opacity .5s;
+
+        }
+.formLabel{
+            z-index: 100;
+            position: absolute;
+            top: 16px;
+            left: 20px;
+            font-size: var(--tinyFontSize); 
+            font-weight: 600; 
+            transition: .2s;
+            pointer-events: none;
+            opacity: 0;
+}
+
+.formButton{
+    justify-self: flex-start;
+    background-color: var(--blackColor);
+
+}
+
+
+.formSubmit{
+    padding: .875rem 1.5rem;
+    color: var(--blackColor);
+    background-color: var(--firstColor);
+    cursor: pointer;
+    transition: transform .3s;
+}
+
+
+.formSubmit:hover{
+transform: translate(-6px,-6px);
+
+}
+
+
+/*====== Opaque PLaceholder ========*/
+
+.formInput:focus::placeholder{
+    opacity: 0;
+    transition: .3s;
+}
+/* Move input and sticky inpui up
+ */
+ 
+.formInput:focus,
+   .formInput:not(:placeholder-shown)
+   .formInput:not(:focus)
+             {
+              transform: translate(-8px, -8px);
+              padding: 28px 18px 18px;
+             }
+
+
+ /*== MOVE LABEL AND STICKY LABEL UP ==*/
+
+.formInput:focus+
+  .formLabel,
+    .formInput:not(:placeholder-shown).formInput:not(:focus)+.formLabel{
+             opacity: 1;
+             top: 2px;
+             left: 12px;   
+             transition: .3s;
+                       }
